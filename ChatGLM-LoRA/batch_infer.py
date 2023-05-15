@@ -61,8 +61,8 @@ if __name__ == "__main__":
             sheet.cell(nrow, 4).value = sample['ft_name']
             nrow += 1
             if nrow % 20 == 0:
-                workbook.save(f"人人对话LLM验证集 {nrow}.xlsx")
-                print(f"人人对话LLM验证集 {nrow}.xlsx: Save!")
+                workbook.save(f"人人对话LLM验证集{nrow}.xlsx")
+                print(f"人人对话LLM验证集{nrow}.xlsx: Save!")
         except Exception as e:
             print("Exception: ", e)
     workbook.save(f"人人对话LLM验证集 {nrow}.xlsx")
