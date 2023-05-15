@@ -61,5 +61,5 @@ if __name__ == "__main__":
         nrow += 1
         if nrow % 20 == 0:
             workbook.save(f"人人对话LLM验证集 {nrow}.xlsx")
-            print(f"人人对话LLM验证集 {nrow}.xlsx: Save!")
-    workbook.save(f"人人对话LLM验证集 {nrow}.xlsx")
+            print(f"人人对话LLM验证集{nrow}.xlsx: Save!")
+    workbook.save(f"人人对话LLM验证集{nrow}.xlsx")
