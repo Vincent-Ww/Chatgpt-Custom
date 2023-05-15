@@ -23,8 +23,6 @@ if __name__ == "__main__":
 
     tokenizer = AutoTokenizer.from_pretrained(chatglm_path, trust_remote_code=True)
     model = AutoModel.from_pretrained(chatglm_path, load_in_8bit=True, trust_remote_code=True, device_map='auto')
-    # tokenizer = AutoTokenizer.from_pretrained('THUDM/chatglm-6b', trust_remote_code=True) model =
-    # AutoModel.from_pretrained('THUDM/chatglm-6b', load_in_8bit=True, trust_remote_code=True, device_map='auto')
     model = model.eval()
 
     response, history = model.chat(tokenizer, '你是谁', history=[])
@@ -44,7 +42,7 @@ if __name__ == "__main__":
     model_lora.load_state_dict(torch.load(peft_path), strict=False)
     torch.set_default_tensor_type(torch.cuda.FloatTensor)
 
-    with open(dev_data_path, "r") as f:
+    with open(dev_data_path, "r", encoding='utf-8') as f:
         dev_data = json.load(f)
 
     workbook = Workbook()
