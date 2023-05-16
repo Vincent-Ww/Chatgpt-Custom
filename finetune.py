@@ -45,7 +45,7 @@ if __name__ == "__main__":
     model.is_parallelizable = True
     model.model_parallel = True
 
-    dataset_path = "/home/xiezizhe/wuzixun/LLM/Chatgpt-Custom/ChatGLM-LoRA/data/ks_human2human_question"
+    dataset_path = "/home/xiezizhe/wuzixun/LLM/Chatgpt-Custom/ChatGLM-LoRA/data/ks_h2h_question"
 
     dataset = datasets.load_from_disk(dataset_path)
 
