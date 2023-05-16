@@ -189,4 +189,4 @@ if __name__ == "__main__":
         torch.save(saved_params, path)
 
 
-    save_tunable_parameters(model, os.path.join("output", "adapter_model.bin"))
+    save_tunable_parameters(model, os.path.join(args.output_name, "adapter_model.bin"))
